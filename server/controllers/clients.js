@@ -17,11 +17,11 @@ module.exports = function(game){
 	function checkName(name){
 		var names = new Map( );
 		var players = game.getPlayers( );
-		players.forEach(item => names.set(players.getName(), true));
+		players.forEach(item => names.set(item.getName(), true));
 		if(names.get(name)){
 			var i = 1;
 			var base = name + '-';
-			while(names[base + i]){
+			while(names.get(base + i)){
 				i++;
 			}
 			name = base + i;
@@ -116,8 +116,8 @@ module.exports = function(game){
 		var player = getPlayer(clientId);
 		if(!player) return;
 		game.getMatrix().remove(player.getX(), player.getY());
-		var players = game.getPlayers();
-		players.delete(clientId);
+		//var players = game.getPlayers();
+		//players.delete(clientId);
 	}
 
 	return {
