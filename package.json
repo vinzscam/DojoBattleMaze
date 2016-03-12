@@ -1,6 +1,6 @@
 {
   "name": "dojo-maze",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kill 'em all to win!",
   "main": "index.js",
   "scripts": {},
